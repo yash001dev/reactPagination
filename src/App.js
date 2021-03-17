@@ -8,7 +8,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import axios from 'axios';
 
 const columns = [
   { id: 'name', label: 'Name', minWidth: 170 },
@@ -71,12 +70,10 @@ const useStyles = makeStyles({
 export default function StickyHeadTable() {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(3);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [personData,setPersonData]=useState([]);
 
-  useEffect(()=>{
 
-  })
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
